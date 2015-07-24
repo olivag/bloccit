@@ -2,4 +2,4 @@
 
 Made with my mentor at [Bloc](http://bloc.io).
 
-Heroku-approved app name: [goliva-bloccit]("https://goliva-bloccit.herokuapp.com)
+Heroku-approved app name: [goliva-bloccit](https://goliva-bloccit.herokuapp.com)
