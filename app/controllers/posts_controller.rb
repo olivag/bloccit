@@ -1,4 +1,11 @@
 class PostsController < ApplicationController
+  
+  # before_action :flash_attack, if: :devise_controller?
+  # protected
+  # def flash_attack
+  #   devise_parameter_sanitizer.for(:sign_up) << :name
+  # end
+
   def index
     @posts = Post.all
   end
@@ -13,6 +20,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params.require(:post).permit(:title, :body))
+    @post.user = current_user
 
     if @post.save
       flash[:notice] = "Post was saved."
